@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MAAppDelegate.h
 //  MVVMArchitectureDemo
 //
 //  Created by gonghonglou on 2018/2/12.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MAAppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (strong, nonatomic) UIWindow *window;
 
 @end
-

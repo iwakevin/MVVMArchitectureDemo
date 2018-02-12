@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  MALoginViewContainer.h
 //  MVVMArchitectureDemo
 //
 //  Created by gonghonglou on 2018/2/12.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface MALoginViewContainer : UIView
 
 @end
-

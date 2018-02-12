@@ -1,22 +1,31 @@
 //
-//  AppDelegate.m
+//  MAAppDelegate.m
 //  MVVMArchitectureDemo
 //
 //  Created by gonghonglou on 2018/2/12.
 //  Copyright © 2018年 Troy. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "MAAppDelegate.h"
+#import "MACoordinatingController.h"
 
-@interface AppDelegate ()
+@interface MAAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+
+@implementation MAAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[MACoordinatingController sharedInstance] activeViewController];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    return YES;
+    
     return YES;
 }
 
@@ -49,3 +58,4 @@
 
 
 @end
+
