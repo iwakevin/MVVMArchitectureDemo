@@ -10,4 +10,6 @@
 
 @interface MAHomeViewContainer : UIView
 
+@property (nonatomic, copy) NSArray *dataArray;
+
 @end
