@@ -10,12 +10,18 @@
 
 @implementation MALoginViewContainer
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.confirmButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        self.confirmButton.frame = CGRectMake(100, 300, 175, 40);
+        self.confirmButton.layer.cornerRadius = 4.0;
+        self.confirmButton.backgroundColor = [UIColor redColor];
+        [self.confirmButton setTitle:@"点击登录" forState:UIControlStateNormal];
+        [self.confirmButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self addSubview:self.confirmButton];
+    }
+    return self;
 }
-*/
 
 @end

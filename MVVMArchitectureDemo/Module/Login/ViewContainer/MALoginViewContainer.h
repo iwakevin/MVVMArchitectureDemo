@@ -10,4 +10,6 @@
 
 @interface MALoginViewContainer : UIView
 
+@property (nonatomic, strong) UIButton *confirmButton;
+
 @end

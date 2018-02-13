@@ -8,6 +8,13 @@
 
 #import "MACoordinatingController.h"
 #import "MALoginViewController.h"
+#import "MAHomeViewController.h"
+
+@interface MACoordinatingController ()
+
+@property (nonatomic, strong) MAHomeViewController *homeVC;
+
+@end
 
 @implementation MACoordinatingController
 
@@ -36,6 +43,27 @@
         _activeViewController = [MALoginViewController new];
     }
     return self;
+}
+
+
+/**
+ 中介者推出 ViewController 的基础方法
+
+ @param viewController  待推出的页面
+ @param animated        动画
+ */
+- (void)mediatorPushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    [_activeViewController.navigationController pushViewController:viewController animated:animated];
+    _activeViewController = viewController;
+}
+
+
+/**
+ 推出首页
+ */
+- (void)pushToHomeViewController {
+    if (!self.homeVC) self.homeVC = [MAHomeViewController new];
+    [self mediatorPushViewController:self.homeVC animated:YES];
 }
 
 @end

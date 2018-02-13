@@ -10,4 +10,6 @@
 
 @interface MAHomeViewModel : NSObject
 
+@property (nonatomic, copy) NSArray *dataArray;
+
 @end

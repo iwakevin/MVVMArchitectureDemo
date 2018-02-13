@@ -22,4 +22,10 @@
  */
 + (MACoordinatingController *)sharedInstance;
 
+
+/**
+ 推出首页
+ */
+- (void)pushToHomeViewController;
+
 @end

@@ -7,8 +7,14 @@
 //
 
 #import "MALoginViewController.h"
+#import "MALoginViewContainer.h"
+#import "MALoginViewModel.h"
 
 @interface MALoginViewController ()
+
+@property (nonatomic, strong) MALoginViewContainer *viewContainer;
+
+@property (nonatomic, strong) MALoginViewModel *viewModel;
 
 @end
 
@@ -16,22 +22,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // viewModel
+    self.viewModel = [MALoginViewModel new];
+    // layoutUI
+    [self layoutUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+/**
+ 页面布局
+ */
+- (void)layoutUI {
+    // title
+    self.navigationItem.title = @"登录页";
+    // viewContainer
+    self.viewContainer = [MALoginViewContainer new];
+    self.view = self.viewContainer;
+    
+    [self.viewContainer.confirmButton addTarget:self action:@selector(clickConfirmButton) forControlEvents:UIControlEventTouchUpInside];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+/**
+ 点击登录按钮
+ */
+- (void)clickConfirmButton {
+    [self.viewModel login];
 }
-*/
 
 @end

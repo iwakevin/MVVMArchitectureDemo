@@ -7,7 +7,13 @@
 //
 
 #import "MAHomeViewModel.h"
+#import <ReactiveObjC/ReactiveObjC.h>
+
+@interface MAHomeViewModel ()
+
+@end
 
 @implementation MAHomeViewModel
+
 
 @end

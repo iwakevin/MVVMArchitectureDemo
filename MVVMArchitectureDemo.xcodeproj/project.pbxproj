@@ -122,6 +122,7 @@
 		75A345C520318CB0003E62A6 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				75B85E672032CED400E71BC7 /* Category */,
 				75A345C920318CDE003E62A6 /* Login */,
 				75A345DA203190BE003E62A6 /* Home */,
 				75A345E7203196EC003E62A6 /* Detail */,
@@ -261,6 +262,13 @@
 				75A345FC203197D2003E62A6 /* MAHomeTableViewCellVO.m */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		75B85E672032CED400E71BC7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		77A3A385B7DC9502A66ECE0D /* Pods */ = {

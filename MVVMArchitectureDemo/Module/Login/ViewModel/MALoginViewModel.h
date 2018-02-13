@@ -10,4 +10,9 @@
 
 @interface MALoginViewModel : NSObject
 
+/**
+ 登录方法
+ */
+- (void)login;
+
 @end

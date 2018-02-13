@@ -7,7 +7,16 @@
 //
 
 #import "MALoginViewModel.h"
+#import "MACoordinatingController.h"
 
 @implementation MALoginViewModel
+
+
+/**
+ 登录方法
+ */
+- (void)login {    
+    [[MACoordinatingController sharedInstance] pushToHomeViewController];
+}
 
 @end

@@ -7,8 +7,15 @@
 //
 
 #import "MAHomeViewController.h"
+#import "MAHomeViewContainer.h"
+#import "MAHomeViewModel.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface MAHomeViewController ()
+
+@property (nonatomic, strong) MAHomeViewContainer *viewContainer;
+
+@property (nonatomic, strong) MAHomeViewModel *viewModel;
 
 @end
 
@@ -16,22 +23,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // viewModel
+    self.viewModel = [MAHomeViewModel new];
+    // layoutUI
+    [self layoutUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+/**
+ 页面布局
+ */
+- (void)layoutUI {
+    // title
+    self.navigationItem.title = @"主页";
+    // viewContainer
+    self.viewContainer = [MAHomeViewContainer new];
+    self.view = self.viewContainer;
 }
-*/
 
 @end
