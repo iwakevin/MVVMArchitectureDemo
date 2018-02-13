@@ -12,4 +12,9 @@
 
 @property (nonatomic, copy) NSArray *dataArray;
 
+/**
+ 逻辑处理，生成数据
+ */
+- (void)operateDataArray;
+
 @end

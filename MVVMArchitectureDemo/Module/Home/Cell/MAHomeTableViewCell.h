@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MAHomeTableViewCellVO;
 
 @interface MAHomeTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) UILabel *titleLabel;
+
+@property (nonatomic, strong) UILabel *messageLabel;
+
+
+- (void)setHomeTableViewCellWithVO:(MAHomeTableViewCellVO *)cellVO;
+
+
++ (NSString *)cellIdentifier;
 
 @end

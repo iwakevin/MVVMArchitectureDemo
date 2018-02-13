@@ -7,18 +7,30 @@
 //
 
 #import "MAHomeTableViewCell.h"
+#import "MAHomeTableViewCellVO.h"
 
 @implementation MAHomeTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 10, 200, 40)];
+        [self.contentView addSubview:self.titleLabel];
+        self.messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 50, 200, 40)];
+        [self.contentView addSubview:self.messageLabel];
+    }
+    return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+- (void)setHomeTableViewCellWithVO:(MAHomeTableViewCellVO *)cellVO {
+    self.titleLabel.text = cellVO.title;
+    self.messageLabel.text = cellVO.message;
+}
+
+
++ (NSString *)cellIdentifier {
+    return NSStringFromClass([self class]);
 }
 
 @end

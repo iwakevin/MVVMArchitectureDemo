@@ -10,10 +10,15 @@
 
 @implementation MAHomeViewContainer
 
-- (instancetype)init {
-    self = [super init];
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
+
+        self.tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
+        self.tableView.rowHeight = 100;
+        self.tableView.tableFooterView = [UIView new];
+        [self addSubview:self.tableView];
     }
     return self;
 }
