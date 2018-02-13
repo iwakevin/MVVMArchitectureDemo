@@ -25,6 +25,7 @@
 		75A345F620319799003E62A6 /* MADetailViewContainerVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A345F520319799003E62A6 /* MADetailViewContainerVO.m */; };
 		75A345FA203197C2003E62A6 /* MAHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A345F9203197C2003E62A6 /* MAHomeTableViewCell.m */; };
 		75A345FD203197D2003E62A6 /* MAHomeTableViewCellVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A345FC203197D2003E62A6 /* MAHomeTableViewCellVO.m */; };
+		75B85E6A2032CF3F00E71BC7 /* UIViewController+MAAppear.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B85E692032CF3F00E71BC7 /* UIViewController+MAAppear.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		75A345F9203197C2003E62A6 /* MAHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAHomeTableViewCell.m; sourceTree = "<group>"; };
 		75A345FB203197D2003E62A6 /* MAHomeTableViewCellVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAHomeTableViewCellVO.h; sourceTree = "<group>"; };
 		75A345FC203197D2003E62A6 /* MAHomeTableViewCellVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAHomeTableViewCellVO.m; sourceTree = "<group>"; };
+		75B85E682032CF3F00E71BC7 /* UIViewController+MAAppear.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MAAppear.h"; sourceTree = "<group>"; };
+		75B85E692032CF3F00E71BC7 /* UIViewController+MAAppear.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MAAppear.m"; sourceTree = "<group>"; };
 		B49F6894C9C7A99921DD391A /* libPods-MVVMArchitectureDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVMArchitectureDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5CB9C8EE392822C59FD8084 /* Pods-MVVMArchitectureDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMArchitectureDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMArchitectureDemo/Pods-MVVMArchitectureDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -267,6 +270,8 @@
 		75B85E672032CED400E71BC7 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				75B85E682032CF3F00E71BC7 /* UIViewController+MAAppear.h */,
+				75B85E692032CF3F00E71BC7 /* UIViewController+MAAppear.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 				75A345FD203197D2003E62A6 /* MAHomeTableViewCellVO.m in Sources */,
 				75A345D920318F8D003E62A6 /* MALoginViewModel.m in Sources */,
 				75A345F020319752003E62A6 /* MADetailViewController.m in Sources */,
+				75B85E6A2032CF3F00E71BC7 /* UIViewController+MAAppear.m in Sources */,
 				75A345F620319799003E62A6 /* MADetailViewContainerVO.m in Sources */,
 				75A345D620318F7E003E62A6 /* MALoginViewContainer.m in Sources */,
 				75A345C420318C5C003E62A6 /* MAAppDelegate.m in Sources */,
