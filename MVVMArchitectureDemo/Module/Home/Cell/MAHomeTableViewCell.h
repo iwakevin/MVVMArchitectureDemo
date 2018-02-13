@@ -18,7 +18,6 @@
 
 - (void)setHomeTableViewCellWithVO:(MAHomeTableViewCellVO *)cellVO;
 
-
 + (NSString *)cellIdentifier;
 
 @end

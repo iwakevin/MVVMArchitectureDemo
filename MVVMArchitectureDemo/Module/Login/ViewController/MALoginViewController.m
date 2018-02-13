@@ -22,9 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // viewModel
+
     self.viewModel = [MALoginViewModel new];
-    // layoutUI
     [self layoutUI];
 }
 
@@ -33,9 +32,7 @@
  页面布局
  */
 - (void)layoutUI {
-    // title
     self.navigationItem.title = @"登录页";
-    // viewContainer
     self.viewContainer = [MALoginViewContainer new];
     self.view = self.viewContainer;
     

@@ -24,11 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // viewModel
+
     self.viewModel = [MAHomeViewModel new];
-    // layoutUI
     [self layoutUI];
-    // setObserve
     [self setObserve];
 }
 
@@ -42,9 +40,7 @@
  页面布局
  */
 - (void)layoutUI {
-    // title
     self.navigationItem.title = @"主页";
-    // viewContainer
     self.viewContainer = [[MAHomeViewContainer alloc] initWithFrame:self.view.frame];
     self.view = self.viewContainer;
     
