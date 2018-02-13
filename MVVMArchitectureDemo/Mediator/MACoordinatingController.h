@@ -28,4 +28,11 @@
  */
 - (void)pushToHomeViewController;
 
+
+/**
+ 推出详情页
+ */
+- (void)pushToDetailViewControllerWithTitle:(NSString *)title;
+
+
 @end

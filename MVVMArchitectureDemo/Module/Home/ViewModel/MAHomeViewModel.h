@@ -17,4 +17,11 @@
  */
 - (void)operateDataArray;
 
+/**
+ 点击 cell
+ 
+ @param indexPath 点击位置
+ */
+- (void)didSelectedCellWithIndexPath:(NSIndexPath *)indexPath;
+
 @end

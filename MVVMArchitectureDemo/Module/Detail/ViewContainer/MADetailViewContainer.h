@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MADetailViewContainerVO;
 
 @interface MADetailViewContainer : UIView
+
+@property (nonatomic, strong) UILabel *titleLabel;
+
+@property (nonatomic, strong) UILabel *num1Label;
+
+@property (nonatomic, strong) UILabel *num2Label;
+
+@property (nonatomic, strong) UILabel *num3Label;
+
+
+- (void)setDetailViewContainerWithVO:(MADetailViewContainerVO *)viewContainerVO;
 
 @end

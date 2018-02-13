@@ -7,15 +7,35 @@
 //
 
 #import "MADetailViewContainer.h"
+#import "MADetailViewContainerVO.h"
 
 @implementation MADetailViewContainer
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [UIColor whiteColor];
+        
+        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 100, 200, 50)];
+        [self addSubview:self.titleLabel];
+        
+        self.num1Label = [[UILabel alloc] initWithFrame:CGRectMake(50, 150, 200, 50)];
+        [self addSubview:self.num1Label];
+        
+        self.num2Label = [[UILabel alloc] initWithFrame:CGRectMake(50, 200, 200, 50)];
+        [self addSubview:self.num2Label];
+        
+        self.num3Label = [[UILabel alloc] initWithFrame:CGRectMake(50, 250, 200, 50)];
+        [self addSubview:self.num3Label];
+    }
+    return self;
 }
-*/
+
+- (void)setDetailViewContainerWithVO:(MADetailViewContainerVO *)viewContainerVO {
+    self.titleLabel.text = viewContainerVO.title;
+    self.num1Label.text = viewContainerVO.num1;
+    self.num2Label.text = viewContainerVO.num2;
+    self.num3Label.text = viewContainerVO.num3;
+}
 
 @end

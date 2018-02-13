@@ -7,8 +7,15 @@
 //
 
 #import "MADetailViewController.h"
+#import "MADetailViewContainer.h"
+#import "MADetailViewModel.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface MADetailViewController ()
+
+@property (nonatomic, strong) MADetailViewContainer *viewContainer;
+
+@property (nonatomic, strong) MADetailViewModel *viewModel;
 
 @end
 
@@ -16,22 +23,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [self layoutUI];
+    [self setObserve];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.viewModel operateDetailViewContainerVO];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)layoutUI {
+    self.navigationItem.title = @"详情页";
+    self.viewContainer = [[MADetailViewContainer alloc] initWithFrame:self.view.frame];
+    self.view = self.viewContainer;
 }
-*/
+
+
+- (void)setObserve {
+    @weakify(self);
+    [RACObserve(self.viewModel, viewContainerVO) subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        [self.viewContainer setDetailViewContainerWithVO:x];
+    }];
+}
+
+
+- (void)setViewModelTitle:(NSString *)title {
+    if (!self.viewModel) self.viewModel = [MADetailViewModel new];
+    [self.viewModel setViewModelTitle:title];
+}
 
 @end

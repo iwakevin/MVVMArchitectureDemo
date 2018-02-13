@@ -9,10 +9,13 @@
 #import "MACoordinatingController.h"
 #import "MALoginViewController.h"
 #import "MAHomeViewController.h"
+#import "MADetailViewController.h"
 
 @interface MACoordinatingController ()
 
 @property (nonatomic, strong) MAHomeViewController *homeVC;
+
+@property (nonatomic, strong) MADetailViewController *detailVC;
 
 @end
 
@@ -52,6 +55,16 @@
 - (void)pushToHomeViewController {
     if (!self.homeVC) self.homeVC = [MAHomeViewController new];
     [_activeViewController.navigationController pushViewController:self.homeVC animated:YES];
+}
+
+
+/**
+ 推出详情页
+ */
+- (void)pushToDetailViewControllerWithTitle:(NSString *)title {
+    if (!self.detailVC) self.detailVC = [MADetailViewController new];
+    [self.detailVC setViewModelTitle:title];
+    [_activeViewController.navigationController pushViewController:self.detailVC animated:YES];
 }
 
 @end

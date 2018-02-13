@@ -10,4 +10,6 @@
 
 @interface MADetailViewController : UIViewController
 
+- (void)setViewModelTitle:(NSString *)title;
+
 @end

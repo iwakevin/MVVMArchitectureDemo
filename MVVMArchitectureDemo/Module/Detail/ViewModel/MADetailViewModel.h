@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+@class MADetailViewContainerVO;
 
 @interface MADetailViewModel : NSObject
+
+@property (nonatomic, strong) MADetailViewContainerVO *viewContainerVO;
+
+
+- (void)setViewModelTitle:(NSString *)title;
+
+- (void)operateDetailViewContainerVO;
 
 @end

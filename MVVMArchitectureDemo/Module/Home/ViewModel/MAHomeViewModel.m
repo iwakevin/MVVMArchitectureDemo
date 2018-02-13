@@ -9,6 +9,7 @@
 #import "MAHomeViewModel.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "MAHomeTableViewCellVO.h"
+#import "MACoordinatingController.h"
 
 @interface MAHomeViewModel ()
 
@@ -28,6 +29,17 @@
         [mutableArray addObject:cellVO];
     }
     self.dataArray = [mutableArray copy];
+}
+
+
+/**
+ 点击 cell
+
+ @param indexPath 点击位置
+ */
+- (void)didSelectedCellWithIndexPath:(NSIndexPath *)indexPath {
+    MAHomeTableViewCellVO *cellVO = self.dataArray[indexPath.row];
+    [[MACoordinatingController sharedInstance] pushToDetailViewControllerWithTitle:cellVO.title];
 }
 
 @end

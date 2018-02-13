@@ -10,4 +10,12 @@
 
 @interface MADetailViewContainerVO : NSObject
 
+@property (nonatomic, copy) NSString *title;
+
+@property (nonatomic, copy) NSString *num1;
+
+@property (nonatomic, copy) NSString *num2;
+
+@property (nonatomic, copy) NSString *num3;
+
 @end
