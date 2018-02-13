@@ -36,8 +36,9 @@
 - (void)ma_viewWillAppear:(BOOL)animated {
     [self ma_viewWillAppear:animated];
     
-    if ([self isKindOfClass:NSClassFromString(@"UIInputWindowController")]) return;
-    [MACoordinatingController sharedInstance].activeViewController = self;
+    if (![self isKindOfClass:NSClassFromString(@"UIInputWindowController")]) {
+        [MACoordinatingController sharedInstance].activeViewController = self;
+    }
 }
 
 @end
